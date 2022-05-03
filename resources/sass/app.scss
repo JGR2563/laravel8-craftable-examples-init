@@ -1,0 +1,15 @@
+// Fonts
+//@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+//@import './../css/app.css';
+
+// Variables
+//@import 'variables';
+
+// Bootstrap
+//@import '~bootstrap/scss/bootstrap';
+
+#products_content{
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between;
+}
