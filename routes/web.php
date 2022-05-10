@@ -18,6 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('products', ProductController::class);
+
+Route::get('/dashboard', [ ProductController::class, 'index' ])->name('dashboard');
+
+/*
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -25,3 +30,4 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', [ ProductController::class, 'index' ])->name('dashboard');
 });
+*/

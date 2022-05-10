@@ -56,6 +56,9 @@ return [
 
     'asset_url' => null,
 
+    // FOR PRODUCTION (CUSTOM)
+    //'asset_url' => '/public',
+
     /*
     |--------------------------------------------------------------------------
     | Livewire App URL

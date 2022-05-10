@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\StockUpdated;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Http\Requests\SaveProduct;
 
 class ProductController extends Controller
 {
@@ -69,9 +71,16 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(SaveProduct $request, Product $product)
     {
-        //
+        $data = $request->validated();
+
+        $product->fill($data);
+        $product->save();
+
+        event( new StockUpdated($product) );
+        
+        return $product;
     }
 
     /**
