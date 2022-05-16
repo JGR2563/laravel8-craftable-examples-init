@@ -17,4 +17,39 @@ $factory->define(Brackets\AdminAuth\Models\AdminUser::class, function (Faker\Gen
         'last_login_at' => $faker->dateTime,
         
     ];
+});/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Role::class, static function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->firstName,
+        'guard_name' => $faker->sentence,
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Permission::class, static function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->firstName,
+        'guard_name' => $faker->sentence,
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Post::class, static function (Faker\Generator $faker) {
+    return [
+        'title' => $faker->sentence,
+        'slug' => $faker->unique()->slug,
+        'perex' => $faker->text(),
+        'published_at' => $faker->date(),
+        'enabled' => $faker->boolean(),
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
 });

@@ -20,7 +20,7 @@ return [
     |
     */
 
-    'check_forbidden' => env('FORBIDDEN_ENABLED', false),
+    'check_forbidden' => env('FORBIDDEN_ENABLED', true),
 
     /*
     |

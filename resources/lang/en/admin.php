@@ -30,5 +30,61 @@ return [
         ],
     ],
 
+    'role' => [
+        'title' => 'Roles',
+
+        'actions' => [
+            'index' => 'Roles',
+            'create' => 'New Role',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'name' => 'Name',
+            'guard_name' => 'Guard name',
+            
+        ],
+    ],
+
+    'permission' => [
+        'title' => 'Permissions',
+
+        'actions' => [
+            'index' => 'Permissions',
+            'create' => 'New Permission',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'name' => 'Name',
+            'guard_name' => 'Guard name',
+            
+        ],
+    ],
+
+    'post' => [
+        'title' => 'Posts',
+
+        'actions' => [
+            'index' => 'Posts',
+            'create' => 'New Post',
+            'edit' => 'Edit :name',
+            'will_be_published' => 'Post will be published at',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'title' => 'Title',
+            'slug' => 'Slug',
+            'perex' => 'Perex',
+            'published_at' => 'Published at',
+            'enabled' => 'Enabled',
+            'media' => 'Media',
+            
+        ],
+    ],
+
     // Do not delete me :) I'm used for auto-generation
 ];

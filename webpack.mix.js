@@ -18,11 +18,7 @@ mix.js('resources/js/app.js', 'public/js')
     ])
     .sourceMaps();
 
-if( mix.inProduction() ){
-    mix.version()
-}
-
-mix.browserSync('http://ves.test')
+//mix.browserSync('http://ves.test')
 
 mix
   .js(["resources/js/admin/admin.js"], "public/js")
